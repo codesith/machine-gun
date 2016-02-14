@@ -1,0 +1,25 @@
+{
+  "name": "machine-gun",
+  "version": "1.0.0",
+  "description": "Machine gun game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codesith/machine-gun.git"
+  },
+  "keywords": [
+    "node",
+    "raspberry",
+    "game"  ],
+  "author": "John Xiao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codesith/machine-gun/issues"
+  },
+  "homepage": "https://github.com/codesith/machine-gun",
+  "dependencies": {
+  }
+}
