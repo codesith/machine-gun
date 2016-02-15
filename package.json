@@ -21,5 +21,6 @@
   },
   "homepage": "https://github.com/codesith/machine-gun",
   "dependencies": {
+      "random-js":"~1.0.8"
   }
 }
