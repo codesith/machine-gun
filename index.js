@@ -21,7 +21,10 @@ function init() {
 
 function go() {
   aiMove = ai.nextMove();
-  playerMove = false;
+  playerMove = getPlayerMove(aiMove);
+}
+
+function getPlayerMove(aiMove) {
   rl.question("F(ire), L(oad), or B(lock)?", function(m) {
     switch (m.toLowerCase()) {
       case "l" :
@@ -34,8 +37,12 @@ function go() {
         playerMove = player.fire();
         break;
       default :
-        playerMove = player.noop();
+        playerMove = false;
         break;
+    }
+    if (!playerMove) {
+      console.log("Illegal move!")
+      return getPlayerMove(aiMove);
     }
     compare(aiMove, playerMove);
   });

@@ -6,7 +6,7 @@ function Shotgun (n) {
 Shotgun.prototype.fire = function() {
   if (this.ammo <= 0) {
     // illegal move
-    return this.noop();
+    return false;
   } else {
     this.ammo --;
     this.history.push("fire");
@@ -24,11 +24,6 @@ Shotgun.prototype.block = function() {
   this.history.push("block");
   return "b";
 };
-
-Shotgun.prototype.noop = function() {
-  this.history.push("noop");
-  return "";
-}
 
 Shotgun.prototype.reset = function() {
   this.ammo = 0;
