@@ -34,7 +34,7 @@ AI.prototype.nextMove = function() {
     move = this.load();
   } else if (0 < this.shotgun.ammo && 0 == this.opponent.ammo) {
     // opponent has no ammo, safe to load or fire
-    switch(random.integer(1, 3)) {
+    switch(random.integer(1, 2)) {
       case 1 :
         move = this.load();
         break;
@@ -54,7 +54,7 @@ AI.prototype.nextMove = function() {
     }
   } else {
     // both players have ammo, anything is possible
-    switch(random.integer(1, 4)) {
+    switch(random.integer(1, 3)) {
       case 1 :
         move = this.load();
         break;
